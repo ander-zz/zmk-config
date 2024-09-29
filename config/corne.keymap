@@ -9,10 +9,10 @@
 
 / {
     macros {
-        copy: copy {
+        mark_all: copy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(C)>;
+            bindings = <&kp LC(A)>;
             label = "COPY";
         };
     };
@@ -28,9 +28,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp F     &kp R  &kp B        &kp J    &kp L  &kp U      &kp Y    &none     &kp BSPC
-&kp TAB     &kp A  &kp R  &kp S     &kp T  &kp G        &kp M    &kp N  &kp E      &kp I    &kp O     &kp ENTER
-&kp LSHFT   &kp Z  &kp X  &kp C     &kp D  &kp V        &kp K    &kp H  &kp COMMA  &kp DOT  &kp FSLH  &kp DOUBLE_QUOTES
+&kp ESCAPE  &kp Q  &kp W  &kp F     &kp P  &kp B        &kp J    &kp L  &kp U      &kp Y    &none         &kp BSPC
+&kp TAB     &kp A  &kp R  &kp S     &kp T  &kp G        &kp M    &kp N  &kp E      &kp I    &kp O         &kp ENTER
+&kp LSHFT   &kp Z  &kp X  &kp C     &kp D  &kp V        &kp K    &kp H  &kp COMMA  &kp DOT  &kp QUESTION  &kp DOUBLE_QUOTES
                           &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
@@ -43,10 +43,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESC    &none   &none           &kp UP_ARROW  &none        &none        &none    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none            &kp BSPC
-&kp TAB    &none   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT    &none        &none    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans
-&kp LSHFT  &trans  &kp K_CUT       &kp K_COPY    &kp K_PASTE  &trans       &trans   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans           &trans
-                                   &kp LGUI      &trans       &kp SPACE    &kp RET  &trans           &kp RALT
+&kp ESC    &none   &none           &kp UP_ARROW   &none           &none        &none    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none            &kp BSPC
+&kp TAB    &none   &kp LEFT_ARROW  &kp DOWN       &kp RIGHT       &none        &none    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans
+&kp LSHFT  &trans  &kp C_AC_CUT    &kp C_AC_COPY  &kp C_AC_PASTE  &trans       &trans   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans           &trans
+                                   &kp LGUI       &trans          &kp SPACE    &kp RET  &trans           &kp RALT
             >;
         };
 
