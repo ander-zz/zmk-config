@@ -9,8 +9,9 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: locales
+    - name: zmk-locales
       remote: german_locales
       revision: main
+      import: app/west.yml
   self:
     path: config
