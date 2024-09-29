@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: zmk-locales
-      url-base: https://github.com/joelspadin/zmk-locales/tree/main/include/
+      url-base: https://github.com/joelspadin/zmk-locales/tree/main/include
   projects:
     - name: zmk
       remote: zmkfirmware
