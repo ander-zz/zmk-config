@@ -11,6 +11,7 @@ manifest:
       import: app/west.yml
     - name: locale
       remote: zmk-locales
-      revision: west.yml
+      revision: main
+      import: west.yml
   self:
     path: config
