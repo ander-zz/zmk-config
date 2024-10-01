@@ -40,7 +40,7 @@
             bindings = <
             &kp TAB    &kp DE_EXCL  &kp DE_AT       &kp UP_ARROW    &kp DLLR    &kp DE_PRCNT    &kp DE_CARET  &kp DE_AMPS    &kp DE_ASTRK  &kp DE_LPAR  &kp DE_RPAR  &kp BSPC
             &kp LCTRL  &trans       &kp LEFT_ARROW  &kp DOWN        &kp RIGHT   &trans          &kp DE_POUND  &kp DE_MINUS   &kp DE_EQUAL  &kp DE_LBKT  &kp DE_RBKT  &kp GRAVE
-            &kp LSHFT  &kp OUT_USB       &kp OUT_BLE          &kp OUT_TOG          &trans      &trans          &kp UNDER     &kp DE_PLUS    &kp LBRC      &kp DE_LBRC  &kp DE_RBRC  &kp TILDE
+            &kp LSHFT  &kp OUT_USB       &kp OUT_BLE          &kp OUT_TOG          &trans      &trans          &kp UNDER     &kp DE_PLUS    &kp DE_BSLH DE_FSLH      &kp DE_LBRC  &kp DE_RBRC  &kp TILDE
                                         &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
