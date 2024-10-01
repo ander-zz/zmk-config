@@ -15,6 +15,17 @@
 };
 
 / {
+    behaviors {
+        win_shift_s_macro: macro {
+            compatible = "zmk,behavior-macro";
+            label = "Windows + Shift + S";
+            #binding-cells = <0>;
+            bindings = <&kp KC_LGUI &kp KC_LSFT &kp KC_S>;
+        };
+    };
+};
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -29,7 +40,7 @@
 
         lower_layer {
             bindings = <
-             &kp BSPC      &none         &none           &kp UP_ARROW  &none          &kp LGUI(LSHIFT(KC_S))             &none         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &kp BSPC
+             &kp BSPC      &none         &none           &kp UP_ARROW  &none          &none             &none         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &kp BSPC
              &kp TAB       &kp LC(A)     &kp LEFT_ARROW  &kp DOWN      &kp RIGHT     &none             &none         &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans 
              &kp LSHFT     &kp LC(Z)     &kp LC(X)       &kp LC(C)     &kp LC(V)     &trans            &trans        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans &trans
                                                        &kp LGUI      &trans        &kp SPACE         &kp RET       &trans        &kp RALT
