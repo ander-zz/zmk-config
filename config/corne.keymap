@@ -11,8 +11,8 @@
 #include <dt-bindings/zmk/outputs.h> 
 
 &mt {
-    tapping-term-ms = <200>;
-    quick-tap-ms = <150>;
+    //tapping-term-ms = <400>;
+    quick-tap-ms = <350>;
 };
 
 / {
@@ -22,15 +22,15 @@
         default_layer {
             bindings = <
             &kp ESCAPE     &kp Q               &kp W    &kp F         &kp P         &kp B             &kp J         &kp L         &mt DE_U_UMLAUT U   &kp DE_Y          &none              &kp BSPC
-            &kp TAB        &mt DE_A_UMLAUT A   &kp R    &mt DE_SZ S   &kp T         &kp G             &kp M         &kp N         &kp E               &kp I             &mt DE_O_UMLAUT O  &kp ENTER
+            &kp TAB        &mt DE_A_UMLAUT A   &kp R    &mt DE_SZ S   &kp T         &kp G             &kp M         &kp N         &kp E               &kp I             &mt DE_O_UMLAUT O  &kp RALT
             &kp LSHFT      &kp DE_Z            &kp X    &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA           &kp DOT           &kp DE_QMARK       &kp DE_DQT 
-                                               &kp LEFT_CONTROL       &mo 1         &kp SPACE         &kp RET       &mo 2         &kp RALT
+                                               &kp LEFT_CONTROL       &kp SPACE     &mo 1             &mo 2         &kp RET       &kp LSHFT
             >; 
         };
 
         lower_layer {
             bindings = <
-             &kp BSPC      &none         &none           &kp UP_ARROW  &none          &none             &none         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &kp BSPC
+             &kp BSPC      &none         &none           &kp UP_ARROW  &none          &none             &none        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &kp BSPC
              &kp TAB       &kp LC(A)     &kp LEFT_ARROW  &kp DOWN      &kp RIGHT     &none             &none         &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans 
              &kp LSHFT     &kp LC(Z)     &kp LC(X)       &kp LC(C)     &kp LC(V)     &trans            &trans        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans &trans
                                                        &kp LGUI      &trans        &kp SPACE         &kp RET       &trans        &kp RALT
