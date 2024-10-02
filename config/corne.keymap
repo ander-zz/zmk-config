@@ -11,39 +11,50 @@
 #include <dt-bindings/zmk/outputs.h> 
 
 &mt {
-    //tapping-term-ms = <400>;
-    quick-tap-ms = <350>;
+    tapping-term-ms = <200>;
+    quick_tap_ms = <0>;
+    flavor = "tap-preferred";
 };
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        colemak { 
             bindings = <
             &kp ESCAPE     &kp Q               &kp W    &kp F         &kp P         &kp B             &kp J         &kp L         &mt DE_U_UMLAUT U   &kp DE_Y          &none              &kp BSPC
-            &kp TAB        &mt DE_A_UMLAUT A   &kp R    &mt DE_SZ S   &kp T         &kp G             &kp M         &kp N         &kp E               &kp I             &mt DE_O_UMLAUT O  &kp RALT
+            &kp TAB        &mt LGUI A   &mt LALT R    &mt LCTRL S   &mt LSHFT T     &kp G             &kp M         &mt LSHFT N   &mt LCTRL E         &mt LALT I        &mt LGUI O         &kp RALT
             &kp LSHFT      &kp DE_Z            &kp X    &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA           &kp DOT           &kp DE_QMARK       &kp DE_DQT 
-                                               &kp LEFT_CONTROL       &kp SPACE     &mo 1             &mo 2         &kp RET       &kp LSHFT
+                                               &mo 3       &mo 1     &kp SPACE             &kp RET         &mo 2       &mo 3
             >; 
         };
 
-        lower_layer {
+        numbers {
             bindings = <
              &kp BSPC      &none         &none           &kp UP_ARROW  &none          &none             &none        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &kp BSPC
              &kp TAB       &kp LC(A)     &kp LEFT_ARROW  &kp DOWN      &kp RIGHT     &none             &none         &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans 
              &kp LSHFT     &kp LC(Z)     &kp LC(X)       &kp LC(C)     &kp LC(V)     &trans            &trans        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans &trans
-                                                       &kp LGUI      &trans        &kp SPACE         &kp RET       &trans        &kp RALT
+                                                         ?&kp LGUI      &trans        &kp SPACE         &kp RET       &trans        &kp RALT
             >;
         };
 
-        raise_layer {
+        symbols {
             bindings = <
             &kp TAB    &kp DE_EXCL  &kp DE_AT       &kp UP_ARROW    &kp DLLR    &kp DE_PRCNT    &kp DE_CARET  &kp DE_AMPS    &kp DE_ASTRK  &kp DE_LPAR  &kp DE_RPAR  &kp BSPC
             &kp LCTRL  &trans       &kp LEFT_ARROW  &kp DOWN        &kp RIGHT   &trans          &kp DE_POUND  &kp DE_MINUS   &kp DE_EQUAL  &kp DE_LBKT  &kp DE_RBKT  &kp GRAVE
-            &kp LSHFT  &kp OUT_USB       &kp OUT_BLE          &kp OUT_TOG          &trans      &trans          &kp UNDER     &kp DE_PLUS    &mt DE_BSLH DE_FSLH      &kp DE_LBRC  &kp DE_RBRC  &kp TILDE
+            &kp LSHFT  &trans       &trans          &trans          &trans      &trans          &kp UNDER     &kp DE_PLUS    &mt DE_BSLH DE_FSLH      &kp DE_LBRC  &kp DE_RBRC  &kp TILDE
                                         &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
+
+        umlaute {
+            bindings = <
+            &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &kp DE_U_UMLAUT  &trans  &trans
+            &trans  &kp DE_A_UMLAUT &trans  &kp DE_SZ   &trans  &trans     &trans  &trans  &trans  &trans  &kp DE_O_UMLAUT  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans  &trans  &trans     &trans  &trans  &trans
+            >;
+        };
+
     };
 };
