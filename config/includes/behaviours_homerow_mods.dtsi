@@ -1,4 +1,5 @@
 // Make sure settings.dtsi is included before this file
+#include "settings.dtsi"
 
 #define HM_TAPPING_TERM 300
 #define HM_TAPPING_TERM_FAST 200
