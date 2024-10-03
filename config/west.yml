@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: zmk-locales-base
       url-base: https://github.com/ander-zz
+    - name: urob
+      url-base: https://github.com/ander-zz
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -12,5 +14,9 @@ manifest:
     - name: zmk-locales
       remote: zmk-locales-base
       revision: main
+    - name: zmk-helpers
+      remote: urob
+      revision: main
+
   self:
     path: config
