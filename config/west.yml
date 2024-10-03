@@ -5,17 +5,14 @@ manifest:
     - name: zmk-locales-base
       url-base: https://github.com/ander-zz
     - name: urob
-      url-base: https://github.com/ander-zz
+      url-base: https://github.com/urob
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: urob
       revision: main
       import: app/west.yml
     - name: zmk-locales
       remote: zmk-locales-base
-      revision: main
-    - name: zmk-helpers
-      remote: urob
       revision: main
 
   self:
