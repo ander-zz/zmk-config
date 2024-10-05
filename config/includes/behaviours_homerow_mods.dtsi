@@ -30,8 +30,8 @@
             quick-tap-ms = <175>;                // repeat on tap-into-hold
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
 
-            hold-trigger-key-positions = <KEYS_R KEYS_T>;
-            hold-trigger-on-release = <175>;
+            hold-trigger-key-positions = <5 6 7 8 9 10>;  //<KEYS_R KEYS_T>
+            hold-trigger-on-release;
         };
 
         hm_r: homerow_mods_right {
