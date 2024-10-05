@@ -1,5 +1,5 @@
 // Make sure settings.dtsi is included before this file
-#include "settings.dtsi"
+//#include "settings.dtsi"
 
 #define HM_TAPPING_TERM 300
 #define HM_TAPPING_TERM_FAST 200
@@ -31,7 +31,7 @@
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
 
             hold-trigger-key-positions = <KEYS_R KEYS_T>;
-            hold-trigger-on-release;
+            hold-trigger-on-release = <true>;
         };
 
         hm_r: homerow_mods_right {
